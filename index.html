@@ -3,28 +3,900 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF One Page</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            background: #ffe01b;
-        }
-        .pdf-page {
-            display: block;
-            max-width: 100vw;
-            height: auto;
-            margin: 0 auto 32px auto; /* Espacio entre páginas */
-            box-shadow: 0 2px 18px rgba(0,0,0,0.1);
-        }
-    </style>
+    <title>OH! Hotel Oriente</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts para toque pop-art y elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img src="img/pagina1.png" class="pdf-page" alt="Página 1">
-    <img src="img/pagina2.png" class="pdf-page" alt="Página 2">
-    <img src="img/pagina3.png" class="pdf-page" alt="Página 3">
-    <img src="img/pagina4.png" class="pdf-page" alt="Página 4">
-    <img src="img/pagina5.png" class="pdf-page" alt="Página 5">
+    <!-- HEADER / NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      <div class="container">
+        <!-- LOGO (pon tu logo en img/logo-oh.png) -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="img/logo-oh.png" alt="Logo OH!" height="48" class="me-2" style="background: #ffe01b; border-radius: 12px; padding: 2px;">
+          <span class="fw-bold" style="font-family: 'Bangers', cursive; font-size: 1.7rem; letter-spacing:2px; color: #f82381;">OH! Hotel Oriente</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#habitaciones">Habitaciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="#fajodromos">Fajódromos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu-alimentos">Menú alimentos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="#decoracion">Decoración</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO / BANNER -->
+    <section id="inicio" class="hero-section d-flex align-items-center justify-content-center text-center">
+      <div class="container position-relative">
+        <!-- Puedes reemplazar la imagen de fondo en CSS -->
+        <h1 class="display-4 fw-bold mb-3 hero-title">¡Bienvenido a OH! Hotel Oriente</h1>
+        <p class="lead hero-desc mb-4">Vive la experiencia más original, divertida y cómoda en el corazón de la ciudad. Descubre nuestras habitaciones temáticas y servicios únicos.</p>
+        <a href="#habitaciones" class="btn btn-lg btn-primary px-4 py-2 rounded-pill">Ver Habitaciones</a>
+      </div>
+    </section>
+
+<!-- SECCIÓN HABITACIONES -->
+<section id="habitaciones" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title mb-4 text-center">Nuestras Habitaciones</h2>
+    <div class="row g-4 justify-content-center">
+ 
+<!-- SUITE JUNIOR -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card habitacion-card shadow-sm h-100">
+    <img src="img/suite-junior.jpg" class="card-img-top" alt="Suite Junior" style="height:220px; object-fit:cover;">
+    <div class="card-body">
+      <h5 class="card-title">Suite Junior</h5>
+      <p class="card-text">Ambiente vibrante, cama cómoda y detalles únicos para una estadía especial.</p>
+      <!-- Botón que abre el modal -->
+      <button type="button" class="btn btn-outline-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#modalSuiteJunior">
+        Ver detalles
+      </button>
+    </div>
+  </div>
+</div>
+
+
+    <!-- SUITE MASTER (tarjeta) -->
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="card habitacion-card shadow-sm h-100">
+    <img src="img/suite-master.jpg" class="card-img-top" alt="Suite Master" style="height:220px; object-fit:cover;">
+    <div class="card-body">
+      <h5 class="card-title">Suite Master</h5>
+      <p class="card-text">Espacio amplio, lujo y confort para quienes buscan lo mejor en su visita.</p>
+      <!-- Botón para modal -->
+      <button type="button" class="btn btn-outline-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#modalSuiteMaster">
+        Ver detalles
+      </button>
+    </div>
+  </div>
+</div>
+
+
+      <!-- VILLA -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card habitacion-card shadow-sm h-100">
+          <img src="img/villa.jpg" class="card-img-top" alt="Villa" style="height:220px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Villa</h5>
+            <p class="card-text">Privacidad, comodidad y un ambiente exclusivo para ocasiones especiales.</p>
+           <!-- Botón para modal -->
+      <button type="button" class="btn btn-outline-primary btn-sm rounded-pill"data-bs-toggle="modal" data-bs-target="#modalVilla">Ver detalles
+</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- SUITE MASTER CON JACUZZI -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card habitacion-card shadow-sm h-100">
+          <img src="img/suite-master-jacuzzi.jpg" class="card-img-top" alt="Suite Master con Jacuzzi" style="height:220px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Suite Master con Jacuzzi</h5>
+            <p class="card-text">Disfruta de lujo total con jacuzzi privado y todos los servicios premium.</p>
+            <button type="button" class="btn btn-outline-primary btn-sm rounded-pill"data-bs-toggle="modal" data-bs-target="#modalSuiteMasterJacuzzi">
+           Ver detalles
+       </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN FAJÓDRAMOS -->
+<section id="fajodromos" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="section-title mb-4 text-center">¿Qué es un Fajódramo?</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="p-4 rounded-4 shadow-sm bg-light text-center">
+          <p class="lead mb-3">
+            El <strong>Fajódramo</strong> es nuestro exclusivo espacio para disfrutar en pareja o en grupo, pensado para explorar nuevas sensaciones y experiencias de forma divertida y segura. Equipados en cada habitación temática, los fajódramos combinan mobiliario erótico, iluminación especial y accesorios para una velada diferente.
+          </p>
+         
+          <div class="mt-4">
+            <a 
+              href="https://drive.google.com/file/d/1H9dFz46CanGLVMRMVjbClLWrA4nkUOG5/view?usp=sharing" 
+              target="_blank" 
+              class="btn btn-outline-primary rounded-pill px-4 py-2"
+              rel="noopener"
+            >
+              Ver menú de Fajódramos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="py-5">
+      <div class="container">
+        <h2 class="section-title mb-4 text-center">Servicios Destacados</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="service-card p-4 rounded-4 shadow-sm h-100 bg-white text-center">
+              <h5 class="fw-bold mb-2">Pantalla Smart TV</h5>
+              <p class="text-muted">Disfruta de tus plataformas favoritas con la mejor calidad de imagen.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="service-card p-4 rounded-4 shadow-sm h-100 bg-white text-center">
+              <h5 class="fw-bold mb-2">Alexa & Música</h5>
+              <p class="text-muted">Controla tu música y ambiente solo con tu voz, sin levantarte de la cama.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="service-card p-4 rounded-4 shadow-sm h-100 bg-white text-center">
+              <h5 class="fw-bold mb-2">WiFi de Alta Velocidad</h5>
+              <p class="text-muted">Conéctate y navega sin límites durante toda tu estadía.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN MENÚ DE ALIMENTOS -->
+<section id="menu-alimentos" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="section-title mb-4 text-center">Menú de Alimentos & Bebidas</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <p class="lead mb-4">
+          Descubre nuestras opciones de snacks, desayunos y bebidas para complementar tu experiencia OH!
+        </p>
+        <!-- Si tienes menú en PDF o imagen -->
+        <a 
+          href="https://drive.google.com/file/d/1Z3pT7uJzT7ppQY7E6eC8fQXl6AyJxQnp/view?usp=sharing"
+          target="_blank"
+          class="btn btn-outline-primary rounded-pill px-4 py-2 mb-3"
+          rel="noopener"
+        >Ver menú completo</a>
+        <br>
+        <!-- Ejemplo visual: tarjetas simples -->
+        <div class="row g-3 justify-content-center">
+          <div class="col-12 col-md-4">
+            <div class="p-3 rounded-4 shadow-sm bg-light h-100">
+              <h5 class="fw-bold mb-2">Snacks</h5>
+              <ul class="list-unstyled small mb-0">
+                <li>🍕 Pizza individual</li>
+                <li>🌭 Hot dog especial</li>
+                <li>🍟 Papas a la francesa</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="p-3 rounded-4 shadow-sm bg-light h-100">
+              <h5 class="fw-bold mb-2">Desayunos</h5>
+              <ul class="list-unstyled small mb-0">
+                <li>🥐 Croissant y café</li>
+                <li>🍳 Omelette a tu gusto</li>
+                <li>🍓 Fruta fresca</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="p-3 rounded-4 shadow-sm bg-light h-100">
+              <h5 class="fw-bold mb-2">Bebidas</h5>
+              <ul class="list-unstyled small mb-0">
+                <li>☕ Café y tés</li>
+                <li>🥤 Refrescos</li>
+                <li>🍸 Cocteles sin alcohol</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Puedes agregar aquí más info o imágenes -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- GALERÍA DE FOTOS COMO CARRUSEL -->
+<section id="galeria" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title mb-4 text-center">Galería</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div id="carouselGaleria" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner rounded-4 shadow">
+            <div class="carousel-item active">
+              <img src="img/galeria1.jpg" class="d-block w-100" alt="Foto galería 1" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/galeria2.jpg" class="d-block w-100" alt="Foto galería 2" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/galeria3.jpg" class="d-block w-100" alt="Foto galería 3" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/galeria4.jpg" class="d-block w-100" alt="Foto galería 4" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/galeria5.jpg" class="d-block w-100" alt="Foto galería 5" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/galeria6.jpg" class="d-block w-100" alt="Foto galería 6" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/galeria7.jpg" class="d-block w-100" alt="Foto galería 7" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/galeria8.jpg" class="d-block w-100" alt="Foto galería 8" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/galeria9.jpg" class="d-block w-100" alt="Foto galería 9" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+            <div class="carousel-item">
+              <img src="img/galeria10.jpg" class="d-block w-100" alt="Foto galería 10" style="height:420px; object-fit:cover; border-radius:16px;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+          <div class="carousel-indicators mt-3">
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="9" aria-label="Slide 10"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECCIÓN PAQUETES DE DECORACIÓN -->
+<section id="decoracion" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title mb-4 text-center">Paquetes de Decoración & PQT</h2>
+    <div class="row justify-content-center">
+
+      <!-- Decoración de Habitación -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+          <h5 class="fw-bold mb-2">Decoración de Habitación</h5>
+          <ul class="list-unstyled mb-3">
+            <li>🎈 Globo corazón metálico 70cm</li>
+            <li>🌹 100 pétalos artificiales</li>
+            <li>🕯️ 6/12 velas leds</li>
+          </ul>
+          <div class="mb-1 small">
+            <strong>Suite Master, Junior, Villa:</strong>
+            <span class="fw-bold text-primary">$250</span>
+          </div>
+          <div class="mb-1 small">
+            <strong>Suite Master OH! Jacuzzi:</strong>
+            <span class="fw-bold text-primary">$380</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PQT Enamores -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+          <h5 class="fw-bold mb-2">PQT Enamores</h5>
+          <ul class="list-unstyled mb-3">
+            <li>Decoración de habitación</li>
+            <li>🍷 Botella de vino Lambrusco 187ml (tinto o rosado)</li>
+          </ul>
+          <div class="mb-1 small">
+            <strong>Suite Master, Junior, Villa:</strong>
+            <span class="fw-bold text-primary">$450</span>
+          </div>
+          <div class="mb-1 small">
+            <strong>Suite Master OH! Jacuzzi:</strong>
+            <span class="fw-bold text-primary">$500</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PQT Quiero -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+          <h5 class="fw-bold mb-2">PQT Quiero</h5>
+          <ul class="list-unstyled mb-3">
+            <li>Decoración de habitación</li>
+            <li>🍾 Botella de vino Asti 200ml</li>
+          </ul>
+          <div class="mb-1 small">
+            <strong>Suite Master, Junior, Villa:</strong>
+            <span class="fw-bold text-primary">$500</span>
+          </div>
+          <div class="mb-1 small">
+            <strong>Suite Master OH! Jacuzzi:</strong>
+            <span class="fw-bold text-primary">$550</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PQT BBA -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+          <h5 class="fw-bold mb-2">PQT BBA</h5>
+          <ul class="list-unstyled mb-3">
+            <li>Decoración de habitación</li>
+            <li>🍾 Botella de vino Riunite Lambrusco 750ml (tinto, rosado o espumoso)</li>
+          </ul>
+          <div class="mb-1 small">
+            <strong>Suite Master, Junior, Villa:</strong>
+            <span class="fw-bold text-primary">$600</span>
+          </div>
+          <div class="mb-1 small">
+            <strong>Suite Master OH! Jacuzzi:</strong>
+            <span class="fw-bold text-primary">$670</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PQT Oval -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+          <h5 class="fw-bold mb-2">PQT Oval</h5>
+          <ul class="list-unstyled mb-3">
+            <li>Decoración de habitación</li>
+            <li>💝 Oval Sex Pack (contenido del Menú Erótico)</li>
+          </ul>
+          <div class="mb-1 small">
+            <strong>Suite Master, Junior, Villa:</strong>
+            <span class="fw-bold text-primary">$600</span>
+          </div>
+          <div class="mb-1 small">
+            <strong>Suite Master OH! Jacuzzi:</strong>
+            <span class="fw-bold text-primary">$725</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PQT Happy Night -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+          <h5 class="fw-bold mb-2">PQT Happy Night</h5>
+          <ul class="list-unstyled mb-3">
+            <li>Decoración de habitación</li>
+            <li>🎁 Kit Happy Night (contenido del Menú Erótico)</li>
+          </ul>
+          <div class="mb-1 small">
+            <strong>Suite Master, Junior, Villa:</strong>
+            <span class="fw-bold text-primary">$700</span>
+          </div>
+          <div class="mb-1 small">
+            <strong>Suite Master OH! Jacuzzi:</strong>
+            <span class="fw-bold text-primary">$780</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PQT Coma -->
+      <div class="col-md-4 mb-4">
+        <div class="p-4 rounded-4 shadow-sm bg-white h-100 text-center">
+          <h5 class="fw-bold mb-2">PQT Coma</h5>
+          <ul class="list-unstyled mb-3">
+            <li>🍾 Botella de vino tinto Riunite Lambrusco 750ml</li>
+            <li>🍽️ Comida o cena (ravioles rellenos de queso + arrachera)</li>
+            <li>🍰 Postre (2 piezas)</li>
+            <li>Decoración de habitación</li>
+          </ul>
+          <div class="mb-1 small">
+            <strong>Suite Master, Junior, Villa:</strong>
+            <span class="fw-bold text-primary">$725</span>
+          </div>
+          <div class="mb-1 small">
+            <strong>Suite Master OH! Jacuzzi:</strong>
+            <span class="fw-bold text-primary">$725</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-warning text-center mt-4 mb-0" style="max-width:700px;margin:auto;">
+      <small>
+        El precio de los paquetes <b>NO incluye la tarifa de habitación</b>.<br>
+        El material de decoración es utilería y propiedad del hotel (excepto el globo metálico de 70cm).<br>
+        Los paquetes requieren <b>reservación previa</b>.<br>
+        Consulta el Menú Erótico para verificar el contenido de los packs.
+      </small>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="https://wa.link/hubuq2" target="_blank" class="btn btn-primary rounded-pill px-4 py-2">
+        Cotiza tu decoración por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CONTACTO Y UBICACIÓN -->
+    <section id="contacto" class="py-5">
+      <div class="container">
+        <h2 class="section-title mb-4 text-center">Contacto & Ubicación</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-4">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" placeholder="Tu nombre">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" placeholder="tucorreo@email.com">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Mensaje</label>
+                <textarea class="form-control" rows="4" placeholder="Tu mensaje"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary rounded-pill">Enviar mensaje</button>
+            </form>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow-sm">
+              <!-- Puedes cambiar el src por tu ubicación en Google Maps -->
+              <iframe
+  src="https://www.google.com/maps?q=OH!+Hotel+Oriente,+Calle+5+de+Febrero+5,+Centro,+06300+Ciudad+de+México,+CDMX,+Mexico&output=embed"
+  width="100%"
+  height="100%"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-dark text-white text-center">
+      <div class="container">
+        <div class="mb-2">
+          <!-- Espacio para redes sociales -->
+          <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white mx-2"><i class="bi bi-whatsapp"></i></a>
+        </div>
+        <small>© 2025 OH! Hotel Oriente · Sitio web demo inspirado en Four Seasons, personalizado por <a href="mailto:contacto@ohhotel.com" class="text-warning text-decoration-none">tu equipo</a></small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- MODAL SUITE JUNIOR -->
+<div class="modal fade" id="modalSuiteJunior" tabindex="-1" aria-labelledby="modalSuiteJuniorLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalSuiteJuniorLabel">Suite Junior</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="carouselSuiteJunior" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-3">
+                <div class="carousel-item active">
+                  <img src="img/suite-junior-1.jpg" class="d-block w-100" alt="Suite Junior 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/suite-junior-2.jpg" class="d-block w-100" alt="Suite Junior 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/suite-junior-3.jpg" class="d-block w-100" alt="Suite Junior 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselSuiteJunior" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselSuiteJunior" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <p>Descubre el equilibrio perfecto entre comodidad y estilo en la <strong>Suite Junior</strong>. Cada habitación tiene una temática especial para una experiencia única. ¡Ideal para momentos inolvidables!</p>
+            <h6 class="mt-3">Tarifas</h6>
+            <div class="d-flex justify-content-center">
+              <table class="table table-bordered table-sm mb-2 w-auto">
+                <thead class="table-light">
+                  <tr>
+                    <th>Estancia</th>
+                    <th>Lunes a Jueves</th>
+                    <th>Viernes a Domingo y Festivos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4 horas</td>
+                    <td>$460.00</td>
+                    <td>$540.00</td>
+                  </tr>
+                  <tr>
+                    <td>6 horas</td>
+                    <td>$560.00</td>
+                    <td>$670.00</td>
+                  </tr>
+                  <tr>
+                    <td>Nocturna</td>
+                    <td>$560.00</td>
+                    <td>No aplica</td>
+                  </tr>
+                  <tr>
+                    <td>Ordinaria</td>
+                    <td colspan="2">$920.00</td>
+                  </tr>
+                  <tr>
+                    <td>Hora extra</td>
+                    <td colspan="2">$150.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small mb-1"><strong>Capacidad:</strong> 2 personas (no se permiten adicionales).</p>
+            <p class="small mb-1">
+              <strong>Incluye:</strong> Pantalla de TV, Alexa, secadora de cabello, cama circular, mobiliario erótico, “fajódramos”, cabecera, comedor, rampa tantra.<br>
+              <strong>Temáticas:</strong> Yupi (columpio), Yes (rincón del sacrificio), Wow (beso), Wuhu (columpio).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a 
+          href="https://wa.link/hubuq2" 
+          target="_blank" 
+          class="btn btn-primary rounded-pill"
+          rel="noopener"
+        >
+          Reservar ahora
+        </a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL SUITE MASTER -->
+<div class="modal fade" id="modalSuiteMaster" tabindex="-1" aria-labelledby="modalSuiteMasterLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalSuiteMasterLabel">Suite Master</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="carouselSuiteMaster" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-3">
+                <div class="carousel-item active">
+                  <img src="img/suite-master-yeah-1.jpg" class="d-block w-100" alt="Suite Master 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/suite-master-yeah-2.jpg" class="d-block w-100" alt="Suite Master 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/suite-master-yeah-3.jpg" class="d-block w-100" alt="Suite Master 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselSuiteMaster" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselSuiteMaster" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <p>Vive una experiencia increíble en la <strong>Suite Master</strong>. Espaciosa, elegante y equipada para disfrutar momentos únicos en compañía. Perfecta para quienes buscan comodidad y diversión.</p>
+            <h6 class="mt-3">Tarifas</h6>
+            <div class="d-flex justify-content-center">
+              <table class="table table-bordered table-sm mb-2 w-auto">
+                <thead class="table-light">
+                  <tr>
+                    <th>Estancia</th>
+                    <th>Lunes a Jueves</th>
+                    <th>Viernes a Domingo y Festivos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4 horas</td>
+                    <td>$560.00</td>
+                    <td>$640.00</td>
+                  </tr>
+                  <tr>
+                    <td>6 horas</td>
+                    <td>$640.00</td>
+                    <td>$800.00</td>
+                  </tr>
+                  <tr>
+                    <td>Nocturna</td>
+                    <td>$640.00</td>
+                    <td>No aplica</td>
+                  </tr>
+                  <tr>
+                    <td>Ordinaria</td>
+                    <td colspan="2">$1,120.00</td>
+                  </tr>
+                  <tr>
+                    <td>Hora extra</td>
+                    <td colspan="2">$150.00</td>
+                  </tr>
+                  <tr>
+                    <td>Persona extra</td>
+                    <td colspan="2">$200.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small mb-1"><strong>Capacidad:</strong> 3 personas (tarifa incluye 2, una persona extra con cargo adicional).</p>
+            <p class="small mb-1">
+              <strong>Incluye:</strong> Cama circular, mobiliario erótico, “fajódramos”, gira-gira, chupa-pop, rampa tantra, potro del amor, pantalla de TV, Alexa, minispit y secadora de cabello.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a 
+          href="https://wa.link/hubuq2" 
+          target="_blank" 
+          class="btn btn-primary rounded-pill"
+          rel="noopener"
+        >
+          Reservar ahora
+        </a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL VILLA -->
+<div class="modal fade" id="modalVilla" tabindex="-1" aria-labelledby="modalVillaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalVillaLabel">Villa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="carouselVilla" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-3">
+                <div class="carousel-item active">
+                  <img src="img/villa-mmm-1.jpg" class="d-block w-100" alt="Villa 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/villa-mmm-2.jpg" class="d-block w-100" alt="Villa 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/villa-mmm-3.jpg" class="d-block w-100" alt="Villa 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselVilla" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselVilla" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <p>Vive una experiencia exclusiva en la <strong>Villa</strong>. Espacios modernos, comodidad total y todos los detalles pensados para una estancia inolvidable.</p>
+            <h6 class="mt-3">Tarifas</h6>
+            <div class="d-flex justify-content-center">
+              <table class="table table-bordered table-sm mb-2 w-auto">
+                <thead class="table-light">
+                  <tr>
+                    <th>Estancia</th>
+                    <th>Lunes a Jueves</th>
+                    <th>Viernes a Domingo y Festivos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4 horas</td>
+                    <td>$580.00</td>
+                    <td>$660.00</td>
+                  </tr>
+                  <tr>
+                    <td>6 horas</td>
+                    <td>$660.00</td>
+                    <td>$820.00</td>
+                  </tr>
+                  <tr>
+                    <td>Ordinaria</td>
+                    <td colspan="2">$1,160.00</td>
+                  </tr>
+                  <tr>
+                    <td>Hora extra</td>
+                    <td colspan="2">$150.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small mb-1"><strong>Capacidad:</strong> 2 personas (no se permiten adicionales).</p>
+            <p class="small mb-1">
+              <strong>Incluye:</strong> Cama circular, mobiliario erótico, “fajódramos”, cabecera, comedor, rampa tántrica, gira-gira, minisplit, pantalla de TV, Alexa, Netflix y secadora de cabello.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a 
+          href="https://wa.link/hubuq2" 
+          target="_blank" 
+          class="btn btn-primary rounded-pill"
+          rel="noopener"
+        >
+          Reservar ahora
+        </a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL SUITE MASTER OH! JACUZZI -->
+<div class="modal fade" id="modalSuiteMasterJacuzzi" tabindex="-1" aria-labelledby="modalSuiteMasterJacuzziLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalSuiteMasterJacuzziLabel">Suite Master OH! Jacuzzi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Carrusel de imágenes (igual que antes) -->
+            <div id="carouselSuiteMasterJacuzzi" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-3">
+                <div class="carousel-item active">
+                  <img src="img/suite-master-jacuzzi-1.jpg" class="d-block w-100" alt="Suite Master Jacuzzi 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/suite-master-jacuzzi-2.jpg" class="d-block w-100" alt="Suite Master Jacuzzi 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/suite-master-jacuzzi-3.jpg" class="d-block w-100" alt="Suite Master Jacuzzi 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselSuiteMasterJacuzzi" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselSuiteMasterJacuzzi" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <p>Disfruta del máximo lujo y privacidad en la <strong>Suite Master OH! Jacuzzi</strong> con jacuzzi privado, cama circular al centro y mobiliario erótico. Perfecta para vivir una experiencia inolvidable.</p>
+            <h6 class="mt-3">Tarifas</h6>
+            <div class="d-flex justify-content-center">
+              <table class="table table-bordered table-sm mb-2 w-auto">
+                <thead class="table-light">
+                  <tr>
+                    <th>Estancia</th>
+                    <th>Lunes a Jueves</th>
+                    <th>Viernes a Domingo y Festivos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4 horas</td>
+                    <td>$800.00</td>
+                    <td>$950.00</td>
+                  </tr>
+                  <tr>
+                    <td>6 horas</td>
+                    <td>$950.00</td>
+                    <td>$1,200.00</td>
+                  </tr>
+                  <tr>
+                    <td>Ordinaria</td>
+                    <td colspan="2">$1,600.00</td>
+                  </tr>
+                  <tr>
+                    <td>Hora extra</td>
+                    <td colspan="2">$200.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small mb-1"><strong>Capacidad:</strong> 2 personas (no se permiten adicionales).</p>
+            <p class="small mb-1">
+              <strong>Incluye:</strong> Cama circular al centro, jacuzzi, mobiliario erótico, “fajódramos”, gira-gira, chupa-pop, rincón del sacrificio, rampa tantra, potro del amor, pantalla de TV, Alexa, Netflix y secadora de cabello.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a 
+  href="https://wa.link/hubuq2" 
+  target="_blank" 
+  class="btn btn-primary rounded-pill"
+  rel="noopener"
+>
+  Reservar ahora
+</a>
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
 </body>
 </html>
 
